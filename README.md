@@ -26,9 +26,36 @@ This project performs an in-depth analysis of credit card transaction datasets t
 - **Model Validation**: Dataset partitioning into Training and Testing sets with strict class distribution control.
 
 ## ⚙️ Installation & Usage
-- **Data Acquisition**: Ensure Kaggle credentials (`kaggle.json`) are configured to download the `mlg-ulb/creditcardfraud` dataset.
-- **Requirements**: Install libraries via `pip install pandas numpy scikit-learn matplotlib seaborn`.
-- **Execution**: Run the notebook sequentially from *API Configuration* to *Model Evaluation*.
+
+### 1. Prerequisites (Kaggle API)
+
+This project uses the Kaggle API to download the dataset.
+
+- Obtain your `kaggle.json` from your Kaggle account settings.
+- In Google Colab, add your credentials to the **Secrets** tab (KAGLLE\_USERNAME and KAGGLE\_KEY).
+- If running locally, place `kaggle.json` in your `~/.kaggle/` folder.
+
+### 2. Setup Environment
+
+```bash
+# Clone the repository
+git clone https://github.com/Billy1205/fraud-detection-system.git
+cd fraud-detection-system
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### 3. Data Acquisition
+
+The notebook is configured to automatically download and extract the dataset:
+  - **Dataset**: [Credit Card Fraud Detection](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
+  - **License**: DbCL-1.0
+
+### 4. Running the Notebook
+
+Execute the cells in `notebooks/fraud-detection-system.ipynb` sequentially.
+
 
 ***
 
@@ -58,8 +85,35 @@ Proyek ini melakukan analisis mendalam terhadap dataset transaksi kartu kredit u
 - **Sampling Strategy**: Mengurangi jumlah transaksi non-fraud agar sejajar dengan jumlah transaksi fraud guna menghindari overfitting pada kelas mayoritas.
 - **Dimensionality Understanding**: Analisis fitur hasil transformasi PCA (V1-V28) untuk mengidentifikasi indikator paling berpengaruh terhadap perilaku fraud.
 - **Model Validation**: Pembagian dataset menjadi Training dan Testing set dengan kontrol distribusi kelas yang ketat.
+Berikut adalah terjemahan Bahasa Indonesia yang telah disesuaikan agar tetap terlihat teknis namun mudah dipahami oleh pengguna lokal. Saya juga memperbaiki instruksi `cd` agar sesuai dengan nama repositori Anda.
 
-## ⚙️ Installation & Usage
-- **Data Acquisition**: Pastikan kredensial Kaggle (`kaggle.json`) sudah dikonfigurasi untuk mengunduh dataset `mlg-ulb/creditcardfraud`.
-- **Requirements**: Instalasi pustaka melalui `pip install pandas numpy scikit-learn matplotlib seaborn`.
-- **Execution**: Jalankan notebook secara berurutan mulai dari sel *API Configuration* hingga *Model Evaluation*
+## ⚙️ Instalasi & Penggunaan
+
+### 1. Prasyarat (Kaggle API)
+
+Proyek ini menggunakan Kaggle API untuk mengunduh dataset secara otomatis.
+
+- Dapatkan file `kaggle.json` dari pengaturan akun Kaggle Anda.
+- **Di Google Colab**: Tambahkan kredensial Anda ke tab **Secrets** (ikon kunci di sidebar kiri) dengan nama `KAGGLE_USERNAME` dan `KAGGLE_KEY`.
+- **Di Lokal (PC/Laptop)**: Simpan file `kaggle.json` di dalam folder `~/.kaggle/`.
+
+### 2. Persiapan Lingkungan (Setup)
+
+```bash
+# Klon repositori ini
+git clone https://github.com/Billy1205/fraud-detection-system.git
+cd fraud-detection-system
+
+# Instal pustaka/dependensi yang diperlukan
+pip install -r requirements.txt
+```
+
+### 3. Akuisisi Data
+
+Notebook ini telah dikonfigurasi untuk mengunduh dan mengekstrak dataset secara otomatis:
+- **Dataset**: [Credit Card Fraud Detection](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
+- **Lisensi**: DbCL-1.0
+
+### 4. Menjalankan Notebook
+
+Jalankan sel kode di dalam `notebooks/fraud-detection-system.ipynb` secara berurutan dari atas ke bawah.
